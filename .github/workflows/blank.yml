@@ -1,0 +1,19 @@
+name: Testing Workflow
+
+on:
+  workflow_dispatch:  # Manually trigger the workflow
+
+jobs:
+  test:
+    name: Testing
+    runs-on: github-runner-weav
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          # Replace this command with your testing script or command
+          echo "Running tests..."
+          # Add your testing commands here
